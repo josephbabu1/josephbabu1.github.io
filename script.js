@@ -12,6 +12,8 @@ let charIndex = 0;
 let isDeleting = false;
 
 function typeText() {
+    if (!typedTextElement) return;
+    
     const currentText = texts[textIndex];
     
     if (isDeleting) {
@@ -68,10 +70,4 @@ function revealOnScroll() {
     }
 }
 
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-
-// Navbar Background Change on Scroll
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50)
+window.addEventListener('scroll', revealOnScroll
