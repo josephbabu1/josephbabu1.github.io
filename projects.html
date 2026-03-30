@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Joseph Babu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional styles for project details */
+        .project-detail {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            margin-bottom: 3rem;
+            padding: 2rem;
+        }
+        
+        .project-header {
+            border-bottom: 1px solid #333;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+        
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            background: #111;
+            border: 1px solid #333;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #333;
+        }
+        
+        .proof-section {
+            background: #111;
+            border-left: 3px solid #fff;
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 2rem 0;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            color: #888;
+        }
+        
+        .tech-badge {
+            background: #000;
+            border: 1px solid #fff;
+            display: inline-block;
+            margin: 0.25rem;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+        }
+        
+        hr {
+            border-color: #333;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1 class="logo">JOSEPH <span>BABU</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="projects.html" class="active">PROJECTS</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding: 120px 0 60px 0;">
+        <div class="container">
+            <h1 class="section-title">ENGINEERING PROJECTS</h1>
+            <p style="text-align: center; margin-bottom: 3rem;">Complete documentation, schematics, and implementation details</p>
+            
+            <!-- Project 1: CAN Go-Kart -->
+            <div class="project-detail" id="can-project">
+                <div class="project-header">
+                    <h2 style="font-size: 2rem;">🔌 EV Go-Kart CAN Telemetry System</h2>
+                    <p style="color: #888; margin-top: 0.5rem;">Formula Kart Racing Championship Season 06 | March 2025 - March 2026</p>
+                </div>
+                
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <i class="fas fa-microchip" style="font-size: 3rem; margin: 1rem;"></i>
+                        <p>ESP32 + MCP2515 Setup</p>
+                    </div>
+                    <div class="gallery-item">
+                        <i class="fas fa-chart-line" style="font-size: 3rem; margin: 1rem;"></i>
+                        <p>Real-time Speed Display</p>
+                    </div>
+                    <div class="gallery-item">
+                        <i class="fas fa-car" style="font-size: 3rem; margin: 1rem;"></i>
+                        <p>Go-Kart Integration</p>
+                    </div>
+                </div>
+                
+                <h3>📋 Project Overview</h3>
+                <p>Developed a complete CAN bus telemetry system for an electric go-kart competing in Formula Kart Racing Championship Season 06. The system reads motor data (RPM, temperature, voltage) from the VESC controller via CAN protocol and displays real-time metrics on an LCD screen.</p>
+                
+                <h3>🔧 Technical Details</h3>
+                <ul style="color: #ccc; margin-left: 1.5rem;">
+                    <li><strong>Microcontroller:</strong> ESP32 with MCP2515 CAN controller</li>
+                    <li><strong>CAN Protocol:</strong> 250 kbps, extended frames (29-bit IDs)</li>
+                    <li><strong>Display:</strong> 16x2 I2C LCD</li>
+                    <li><strong>Motor Controller:</strong> VESC with custom DBC file</li>
+                    <li><strong>Calculations:</strong> Speed from motor RPM using wheel circumference (27.94cm diameter)</li>
+                </ul>
+                
+                <h3>📊 Results & Proof</h3>
+                <div class="proof-section">
+                    <p><i class="fas fa-check-circle"></i> <strong>Working Prototype:</strong> Successfully tested on actual go-kart during practice runs</p>
+                    <p><i class="fas fa-check-circle"></i> <strong>Team Recognition:</strong> Contributed to telemetry subsystem for Season 06</p>
+                    <p><i class="fas fa-check-circle"></i> <strong>Code Repository:</strong> 9 commits, multiple working .ino files</p>
+                    <p><i class="fas fa-check-circle"></i> <strong>Documentation:</strong> Complete VESC DBC file and CAN ID mapping</p>
+                </div>
+                
+                <div class="project-links" style="margin-top: 1.5rem;">
+                    <a href="https://github.com/yechezkiel/CAN-GOKart" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                    <a href="https://github.com/yechezkiel/CAN-GOKart/blob/main/CAN_read.ino" target="_blank" class="project-link">
+                        <i class="fas fa-code"></i> Read Code
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class="fas fa-video"></i> Demo Video
+                    </a>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <!-- Project 2: Chaos-Driven Codec -->
+            <div class="project-detail" id="codec-project">
+                <div class="project-header">
+                    <h2 style="font-size: 2rem;">🌀 Chaos-Driven Time-Varying Convolutional Codec</h2>
+                    <p style="color: #888; margin-top: 0.5rem;">Research Project | FPGA Implementation | Verilog HDL</p>
+                </div>
+                
+                <h3>📋 Project Overview</h3>
+                <p>Design and hardware implementation of a chaos-driven time-varying convolutional encoder with constraint length K=7. Unlike conventional fixed-generator encoders, this system dynamically varies generator polynomials using a synchronized chaotic sequence, introducing lightweight physical layer security while maintaining error correction capability.</p>
+                
+                <h3>🔧 Technical Details</h3>
+                <ul style="color: #ccc; margin-left: 1.5rem;">
+                    <li><strong>Encoding:</strong> Rate 1/2 convolutional encoder with K=7</li>
+                    <li><strong>Polynomial Variation:</strong> Dynamic selection using logistic map chaos generator</li>
+                    <li><strong>Decoding:</strong> 64-state Viterbi decoder with synchronized chaos</li>
+                    <li><strong>Implementation:</strong> Synthesizable Verilog HDL for FPGA</li>
+                    <li><strong>Tools:</strong> Vivado, ModelSim, Xilinx FPGA</li>
+                </ul>
+                
+                <h3>📊 Expected Outcomes & Proof</h3>
+                <div class="proof-section">
+                    <p><i class="fas fa-chart-line"></i> <strong>Simulation Results:</strong> BER comparison with fixed NASA (133,171) code</p>
+                    <p><i class="fas fa-chart-line"></i> <strong>Resource Usage:</strong> LUT count, flip-flops, max clock frequency</p>
+                    <p><i class="fas fa-chart-line"></i> <strong>Synchronization:</strong> Verified chaos generator synchronization for correct decoding</p>
+                    <p><i class="fas fa-file-alt"></i> <strong>Technical Paper:</strong> Complete proposal with block diagrams and architecture</p>
+                </div>
+                
+                <div class="project-links" style="margin-top: 1.5rem;">
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i> Repository (Coming Soon)
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class="fas fa-file-pdf"></i> Project Proposal
+                    </a>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <!-- Project 3: Digital Voltmeter -->
+            <div class="project-detail" id="voltmeter-project">
+                <div class="project-header">
+                    <h2 style="font-size: 2rem;">📟 Digital Voltmeter (ADC0808 + 8051)</h2>
+                    <p style="color: #888; margin-top: 0.5rem;">Embedded Systems Project | Microcontroller Programming</p>
+                </div>
+                
+                <h3>📋 Project Overview</h3>
+                <p>3-channel digital voltmeter using 8051 microcontroller and ADC0808. Converts analog voltage (0-5V) from potentiometers to digital display on a 16×2 LCD. Achieved 19.5mV resolution with less than 2% error across all channels.</p>
+                
+                <h3>🔧 Technical Details</h3>
+                <ul style="color: #ccc; margin-left: 1.5rem;">
+                    <li><strong>Microcontroller:</strong> AT89S52 (8051 architecture)</li>
+                    <li><strong>ADC:</strong> ADC0808 with 8-channel multiplexer</li>
+                    <li><strong>Display:</strong> 16×2 HD44780 LCD (4-bit mode)</li>
+                    <li><strong>Programming:</strong> Embedded C in Keil μVision</li>
+                    <li><strong>Simulation:</strong> Proteus Design Suite</li>
+                </ul>
+                
+                <h3>📊 Results & Proof</h3>
+                <div class="proof-section">
+                    <p><i class="fas fa-chart-line"></i> <strong>Accuracy:</strong> Average error < 2% across test voltages (0.5V - 4.5V)</p>
+                    <p><i class="fas fa-chart-line"></i> <strong>Resolution:</strong> 19.5mV per step (5V/255)</p>
+                    <p><i class="fas fa-check-circle"></i> <strong>Working Simulation:</strong> Successfully simulated in Proteus with real-time updates</p>
+                    <p><i class="fas fa-file-alt"></i> <strong>Documentation:</strong> Complete project report with schematic, code, and results</p>
+                </div>
+                
+                <div class="project-links" style="margin-top: 1.5rem;">
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i> Repository (Coming Soon)
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class="fas fa-file-pdf"></i> Full Report
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class="fas fa-microchip"></i> Schematic
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="btn">← BACK TO HOME</a>
+                <a href="https://github.com/yechezkiel?tab=repositories" target="_blank" class="btn" style="margin-left: 1rem;">
+                    VIEW ALL ON GITHUB <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2024 JOSEPH BABU | ELECTRONICS & COMMUNICATION ENGINEER | GEC THRISSUR</p>
+        </div>
+    </footer>
+</body>
+</html>
