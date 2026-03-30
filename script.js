@@ -1,3 +1,4 @@
+document.body.classList.remove("no-js");
 // Typed Text Animation
 const typedTextElement = document.getElementById('typed-text');
 const texts = [
