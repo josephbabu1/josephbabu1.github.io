@@ -1,122 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joseph Babu | Electronics Engineer</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Babu | Electronics & Communication Engineer | FPGA | DSP | Embedded Systems</title>
+    
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
+<div class="grid-bg"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<nav id="navbar">
     <div class="container">
-        <h1 class="logo">JOSEPH <span>BABU</span></h1>
+        <div class="logo">JOSEPH <span>BABU</span></div>
         <ul class="nav-links">
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
     </div>
 </nav>
 
-<!-- HERO -->
+<!-- Hero Section -->
 <section id="home" class="hero">
     <div class="container">
-        <div class="hero-content">
-            <h2 id="typing"></h2>
-            <h3>Electronics & Communication Engineer</h3>
-            <p>SDR • DSP • FPGA • Embedded Systems</p>
-            <a href="#projects" class="btn">View My Work</a>
+        <div class="hero-content reveal">
+            <div class="hero-badge">ELECTRONICS & COMMUNICATION ENGINEER</div>
+            <h1>JOSEPH <span class="gradient-text">BABU</span></h1>
+            <div class="typed-container">
+                <h2>I build <span id="typed-text"></span><span class="typed-cursor">|</span></h2>
+            </div>
+            <div class="hero-tags">
+                <span>SDR</span><span>DSP</span><span>FPGA</span><span>Embedded Systems</span><span>Verilog</span><span>CAN Protocol</span>
+            </div>
+            <p class="hero-description">Building next-generation secure communication systems and real-time embedded architectures.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Explore My Work <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-outline">Contact Me <i class="fas fa-envelope"></i></a>
+            </div>
         </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <i class="fas fa-chevron-down"></i>
     </div>
 </section>
 
-<!-- ABOUT -->
+<!-- About Section -->
 <section id="about" class="section">
     <div class="container">
-        <h2 class="title">About Me</h2>
-
-        <p class="about-text">
-            I'm Joseph Babu, a 2nd year Electronics and Communication Engineering student at Government Engineering College, Thrissur.
-            Passionate about embedded systems, digital signal processing, and FPGA-based design.
-        </p>
-
-        <p class="about-text">
-            I specialize in building real-world engineering systems — from chaos-driven secure communication architectures
-            to CAN-based real-time telemetry systems for electric go-karts.
-        </p>
-
-        <div class="skills">
-            <span>FPGA</span><span>Verilog</span><span>DSP</span><span>MATLAB</span>
-            <span>ESP32</span><span>CAN Protocol</span><span>Python</span><span>C/C++</span>
+        <h2 class="title reveal">Engineering Excellence</h2>
+        <div class="about-grid">
+            <div class="about-card reveal">
+                <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                <h3>About Me</h3>
+                <p class="about-text">I'm Joseph Babu, a 2nd year Electronics and Communication Engineering student at Government Engineering College, Thrissur. Passionate about embedded systems, digital signal processing, and FPGA-based design.</p>
+                <p class="about-text">I specialize in building real-world engineering systems — from chaos-driven secure communication architectures to CAN-based real-time telemetry systems for electric go-karts.</p>
+                <div class="skills-cloud">
+                    <span>FPGA</span><span>Verilog</span><span>DSP</span><span>MATLAB</span>
+                    <span>ESP32</span><span>CAN Protocol</span><span>Python</span><span>C/C++</span>
+                    <span>LaTeX</span><span>JavaScript</span>
+                </div>
+            </div>
+            <div class="about-card reveal">
+                <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Education</h3>
+                <div class="education-item">
+                    <div class="edu-year">2024 - 2028</div>
+                    <div class="edu-title">B.Tech in Electronics & Communication</div>
+                    <div class="edu-institution">Government Engineering College, Thrissur</div>
+                </div>
+                <div class="education-item">
+                    <div class="edu-year">2022 - 2024</div>
+                    <div class="edu-title">Higher Secondary Education</div>
+                    <div class="edu-institution">Bharatiya Vidya Bhavan, Poochatty</div>
+                </div>
+                <h3 style="margin-top: 30px;"><i class="fas fa-trophy"></i> Affiliations</h3>
+                <div class="affiliations">
+                    <span><i class="fas fa-code"></i> TinkerHub</span>
+                    <span><i class="fas fa-microchip"></i> IEEE Member</span>
+                </div>
+                <h3 style="margin-top: 25px;"><i class="fas fa-certificate"></i> Certifications</h3>
+                <div class="cert-list">
+                    <span>Flutter Development</span>
+                    <span>Electric Vehicle Orientation</span>
+                    <span>Digital Marketing</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="stats-grid reveal">
+            <div class="stat-item">
+                <div class="stat-number" data-count="5">0</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="8">0</div>
+                <div class="stat-label">Technologies Mastered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="2">0</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="100">0</div>
+                <div class="stat-label">Code Commits</div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- Projects Section -->
 <section id="projects" class="section">
     <div class="container">
-        <h2 class="title">Projects</h2>
-
-        <div class="grid">
-
-            <!-- HDL Repo -->
-            <div class="card">
-                <i class="fas fa-microchip"></i>
+        <h2 class="title reveal">Flagship Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-icon"><i class="fas fa-microchip"></i></div>
                 <h3>HDL Digital Systems</h3>
-                <p>Collection of Verilog-based digital designs including FSMs, encoders, and system-level modules.</p>
-
+                <p>Comprehensive Verilog design library featuring FSMs, arithmetic cores, encoders, and system-level digital modules optimized for FPGA synthesis.</p>
+                <div class="project-tech">
+                    <span>Verilog</span><span>FPGA</span><span>Digital Design</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/yechezkiel/HDL" target="_blank">View Code</a>
+                    <a href="https://github.com/yechezkiel/HDL" target="_blank"><i class="fab fa-github"></i> Repository →</a>
                 </div>
             </div>
 
-            <!-- Chaos Codec -->
-            <div class="card">
-                <i class="fas fa-atom"></i>
-                <h3>Chaos-Driven Codec</h3>
-                <p>FPGA implementation of time-varying convolutional encoder with chaos-based security.</p>
-
+            <div class="project-card reveal">
+                <div class="project-icon"><i class="fas fa-atom"></i></div>
+                <h3>Chaos-Driven CoDec</h3>
+                <p>FPGA implementation of a time-varying convolutional encoder with chaos-based encryption for secure physical layer communication.</p>
+                <div class="project-tech">
+                    <span>FPGA</span><span>Chaos Theory</span><span>Encryption</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/yechezkiel/Chaos-Driven-Time-Varying-Convolutional-CoDec" target="_blank">View Code</a>
+                    <a href="https://github.com/yechezkiel/Chaos-Driven-Time-Varying-Convolutional-CoDec" target="_blank"><i class="fab fa-github"></i> Architecture →</a>
                 </div>
             </div>
 
-            <!-- CAN GoKart -->
-            <div class="card">
-                <i class="fas fa-car"></i>
+            <div class="project-card reveal">
+                <div class="project-icon"><i class="fas fa-car"></i></div>
                 <h3>CAN Go-Kart Telemetry</h3>
-                <p>Real-time CAN-based telemetry system using ESP32 and MCP2515 for EV monitoring.</p>
-
+                <p>Real-time CAN bus telemetry system using ESP32 and MCP2515 for electric go-kart monitoring — vehicle speed, battery SOC, and motor temperature.</p>
+                <div class="project-tech">
+                    <span>ESP32</span><span>CAN Protocol</span><span>IoT</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/yechezkiel/CAN-GOKart" target="_blank">View Code</a>
+                    <a href="https://github.com/yechezkiel/CAN-GOKart" target="_blank"><i class="fab fa-github"></i> Telemetry Code →</a>
                 </div>
             </div>
+        </div>
 
+        <!-- Research Interest -->
+        <div class="research-section reveal">
+            <div class="research-content">
+                <i class="fas fa-flask"></i>
+                <h3>Current Research Focus</h3>
+                <p>Exploring chaos-based cryptography for secure communication systems and implementing real-time DSP algorithms on FPGA platforms. Passionate about pushing the boundaries of hardware security and embedded intelligence.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- CONTACT -->
+<!-- Contact Section -->
 <section id="contact" class="section">
     <div class="container">
-        <h2 class="title">Contact</h2>
-
-        <div class="contact">
-            <a href="mailto:jb16042006@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/yechezkiel"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+        <h2 class="title reveal">Connect With Me</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info-card reveal">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:jb16042006@gmail.com">jb16042006@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:+919847219820">+91 9847219820</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Kollannur House, Main Road, Nellikkunnu, East Fort</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-social reveal">
+                <h3>Find me on</h3>
+                <div class="social-links">
+                    <a href="https://github.com/yechezkiel" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/joseph-babu-77b7ab332" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:jb16042006@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="availability">
+                    <i class="fas fa-circle"></i>
+                    <span>Available for collaborations and research opportunities</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 JOSEPH BABU</p>
+    <div class="container">
+        <p>© 2026 JOSEPH BABU | Electronics & Communication Engineer | Built with <i class="fas fa-heart" style="color:#0ff"></i> for next-gen systems</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
 </footer>
 
 <script src="script.js"></script>
