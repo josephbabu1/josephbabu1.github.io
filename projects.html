@@ -74,32 +74,35 @@
     <div class="project">
       <div class="project-header">
         <div class="titles">
-          <h3>Chaos-Driven Time-Varying Convolutional Codec</h3>
-          <div class="meta">Research project — FPGA implementation, Verilog HDL</div>
+          <h3>Chaos-Driven Time-Varying Convolutional Coding (CD-TVCC)</h3>
+          <div class="meta">IEEE-style research paper — MATLAB simulation, Verilog RTL implementation</div>
         </div>
-        <span class="status in-progress">In Progress</span>
+        <span class="status complete">Complete</span>
       </div>
       <div class="project-body">
-        <p class="project-summary">A convolutional encoder (K=7) that varies its generator polynomials dynamically using a synchronized chaotic sequence, rather than the fixed generators used in conventional designs. The aim is to introduce lightweight physical-layer security while preserving standard error-correction performance.</p>
+        <p class="project-summary">A rate-1/2, constraint-length-7 convolutional code whose generator polynomial pair is switched at every bit epoch by a synchronized chaotic sequence, rather than fixed for the whole transmission. The generator pool is restricted to four pre-selected K=7 polynomial pairs that all meet a minimum free distance of 10, so switching adds physical-layer obfuscation without costing any error-correction performance. A receiver that shares the same chaotic seed regenerates the identical switching sequence and decodes with zero overhead; a receiver that doesn't is driven toward random-guess error rates.</p>
 
         <table class="spec-table">
-          <tr><td>Encoding</td><td>Rate 1/2 convolutional encoder, constraint length K=7</td></tr>
-          <tr><td>Polynomial selection</td><td>Dynamic, driven by a logistic-map chaos generator</td></tr>
-          <tr><td>Decoding</td><td>64-state Viterbi decoder, synchronized to the chaos generator</td></tr>
-          <tr><td>Implementation</td><td>Synthesizable Verilog HDL, target FPGA</td></tr>
-          <tr><td>Toolchain</td><td>Vivado, ModelSim, Xilinx FPGA</td></tr>
+          <tr><td>Code</td><td>Rate 1/2 convolutional code, constraint length K=7, free distance &ge; 10</td></tr>
+          <tr><td>Polynomial selection</td><td>Logistic map (r = 3.99), quantized to a 2-bit index over 4 pre-chosen polynomial pairs</td></tr>
+          <tr><td>Decoding</td><td>64-state hard-decision Viterbi decoder, synchronized to the same chaotic seed</td></tr>
+          <tr><td>Channel model</td><td>AWGN, BPSK modulation, simulated over 0&ndash;10 dB E<sub>b</sub>/N<sub>0</sub></td></tr>
+          <tr><td>Hardware</td><td>Verilog RTL — Q8.16 fixed-point logistic map, combinational polynomial MUX, ACS-based Viterbi core</td></tr>
+          <tr><td>Toolchain</td><td>MATLAB (simulation), Verilog (RTL), target FPGA (28nm-class fabric)</td></tr>
         </table>
 
         <div class="results-list">
-          <div class="result-row"><span class="mark">&rarr;</span> BER simulation underway against the fixed NASA (133,171) reference code</div>
-          <div class="result-row"><span class="mark">&rarr;</span> Chaos generator synchronization verified for correct decoding</div>
-          <div class="result-row"><span class="mark">&rarr;</span> Resource usage (LUTs, flip-flops, max clock frequency) being characterized</div>
-          <div class="result-row"><span class="mark">&rarr;</span> Full technical proposal completed, with block diagrams and architecture</div>
+          <div class="result-row"><span class="mark">&rarr;</span> BER statistically equivalent to the fixed NASA (133,171) reference code across 0&ndash;10 dB E<sub>b</sub>/N<sub>0</sub> — about 10<sup>-4</sup> at 6 dB and below 10<sup>-5</sup> at 8 dB</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Effective key space of roughly 2<sup>52</sup> under IEEE 754 double-precision seed arithmetic</div>
+          <div class="result-row"><span class="mark">&rarr;</span> A seed error as small as 10<sup>-12</sup> decorrelates the chaotic sequence within about 40 iterations, driving an unsynchronized receiver's BER toward 0.5</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Polynomial selection verified statistically uniform (chi-squared test, N = 10<sup>6</sup>) with no detectable autocorrelation structure</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Verilog RTL encoder/decoder estimated at under 5% LUT overhead versus a fixed Viterbi decoder, clocking above 100 MHz</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Full reproducible MATLAB simulation suite and RTL published in the linked repository</div>
         </div>
 
         <div class="project-links">
-          <span class="disabled">Repository — coming soon</span>
-          <span class="disabled">Project proposal — coming soon</span>
+          <a href="https://github.com/josephbabu1/CODEC" target="_blank" rel="noopener">Repository &rarr;</a>
+          <a href="assets/CD-TVCC_IEEE_Paper.pdf" target="_blank" rel="noopener">Read the paper &rarr;</a>
         </div>
       </div>
     </div>
