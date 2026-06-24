@@ -1,288 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Joseph Babu</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Additional styles for project details */
-        .project-detail {
-            background: #0a0a0a;
-            border: 1px solid #222;
-            margin-bottom: 3rem;
-            padding: 2rem;
-        }
-        
-        .project-header {
-            border-bottom: 1px solid #333;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-        }
-        
-        .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .gallery-item {
-            background: #111;
-            border: 1px solid #333;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        .gallery-item img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #333;
-        }
-        
-        .proof-section {
-            background: #111;
-            border-left: 3px solid #fff;
-            margin: 1.5rem 0;
-            padding: 1rem 1.5rem;
-        }
-        
-        .back-link {
-            display: inline-block;
-            margin: 2rem 0;
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .back-link:hover {
-            color: #888;
-        }
-        
-        .tech-badge {
-            background: #000;
-            border: 1px solid #fff;
-            display: inline-block;
-            margin: 0.25rem;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
-        }
-        
-        hr {
-            border-color: #333;
-            margin: 2rem 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Joseph Babu</title>
+<meta name="description" content="Engineering projects by Joseph Babu — CAN bus telemetry, FPGA cryptographic hardware, and embedded systems work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-           <a href="index.html" style="text-decoration: none;">
-    <h1 class="logo">JOSEPH <span>BABU</span></h1>
-</a>
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="projects.html" class="active">PROJECTS</a></li>
-                <li><a href="credentials.html">CREDENTIALS</a></li>
-                <li><a href="index.html#contact">CONTACT</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <section style="padding: 120px 0 60px 0;">
-        <div class="container">
-            <h1 class="section-title">ENGINEERING PROJECTS</h1>
-            <p style="text-align: center; margin-bottom: 3rem;">Complete documentation, schematics, and implementation details</p>
-            
-            <!-- Project 1: CAN Go-Kart -->
-            <div class="project-detail" id="can-project">
-                <div class="project-header">
-                    <h2 style="font-size: 2rem;">🔌 EV Go-Kart CAN Telemetry System</h2>
-                    <p style="color: #888; margin-top: 0.5rem;">Formula Kart Racing Championship Season 06 | March 2025 - March 2026</p>
-                </div>
-                
-                <div class="project-gallery">
-                    <div class="gallery-item">
-                        <i class="fas fa-microchip" style="font-size: 3rem; margin: 1rem;"></i>
-                        <p>ESP32 + MCP2515 Setup</p>
-                    </div>
-                    <div class="gallery-item">
-                        <i class="fas fa-chart-line" style="font-size: 3rem; margin: 1rem;"></i>
-                        <p>Real-time Speed Display</p>
-                    </div>
-                    <div class="gallery-item">
-                        <i class="fas fa-car" style="font-size: 3rem; margin: 1rem;"></i>
-                        <p>Go-Kart Integration</p>
-                    </div>
-                </div>
-                
-                <h3>📋 Project Overview</h3>
-                <p>Developed a complete CAN bus telemetry system for an electric go-kart competing in Formula Kart Racing Championship Season 06. The system reads motor data (RPM, temperature, voltage) from the VESC controller via CAN protocol and displays real-time metrics on an LCD screen.</p>
-                
-                <h3>🔧 Technical Details</h3>
-                <ul style="color: #ccc; margin-left: 1.5rem;">
-                    <li><strong>Microcontroller:</strong> ESP32 with MCP2515 CAN controller</li>
-                    <li><strong>CAN Protocol:</strong> 250 kbps, extended frames (29-bit IDs)</li>
-                    <li><strong>Display:</strong> 16x2 I2C LCD</li>
-                    <li><strong>Motor Controller:</strong> VESC with custom DBC file</li>
-                    <li><strong>Calculations:</strong> Speed from motor RPM using wheel circumference (27.94cm diameter)</li>
-                </ul>
-                
-                <h3>📊 Results & Proof</h3>
-                <div class="proof-section">
-                    <p><i class="fas fa-check-circle"></i> <strong>Working Prototype:</strong> Successfully tested on actual go-kart during practice runs</p>
-                    <p><i class="fas fa-check-circle"></i> <strong>Team Recognition:</strong> Contributed to telemetry subsystem for Season 06</p>
-                    <p><i class="fas fa-check-circle"></i> <strong>Code Repository:</strong> 9 commits, multiple working .ino files</p>
-                    <p><i class="fas fa-check-circle"></i> <strong>Documentation:</strong> Complete VESC DBC file and CAN ID mapping</p>
-                </div>
-                
-                <div class="project-links" style="margin-top: 1.5rem;">
-                    <a href="https://github.com/yechezkiel/CAN-GOKart" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View Repository
-                    </a>
-                    <a href="https://github.com/yechezkiel/CAN-GOKart/blob/main/CAN_read.ino" target="_blank" class="project-link">
-                        <i class="fas fa-code"></i> Read Code
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-video"></i> Demo Video
-                    </a>
-                </div>
-            </div>
-            
-            <hr>
-            
-            <!-- Project 2: Chaos-Driven Codec -->
-            <div class="project-detail" id="codec-project">
-                <div class="project-header">
-                    <h2 style="font-size: 2rem;">🌀 Chaos-Driven Time-Varying Convolutional Codec</h2>
-                    <p style="color: #888; margin-top: 0.5rem;">Research Project | FPGA Implementation | Verilog HDL</p>
-                </div>
-                
-                <h3>📋 Project Overview</h3>
-                <p>Design and hardware implementation of a chaos-driven time-varying convolutional encoder with constraint length K=7. Unlike conventional fixed-generator encoders, this system dynamically varies generator polynomials using a synchronized chaotic sequence, introducing lightweight physical layer security while maintaining error correction capability.</p>
-                
-                <h3>🔧 Technical Details</h3>
-                <ul style="color: #ccc; margin-left: 1.5rem;">
-                    <li><strong>Encoding:</strong> Rate 1/2 convolutional encoder with K=7</li>
-                    <li><strong>Polynomial Variation:</strong> Dynamic selection using logistic map chaos generator</li>
-                    <li><strong>Decoding:</strong> 64-state Viterbi decoder with synchronized chaos</li>
-                    <li><strong>Implementation:</strong> Synthesizable Verilog HDL for FPGA</li>
-                    <li><strong>Tools:</strong> Vivado, ModelSim, Xilinx FPGA</li>
-                </ul>
-                
-                <h3>📊 Expected Outcomes & Proof</h3>
-                <div class="proof-section">
-                    <p><i class="fas fa-chart-line"></i> <strong>Simulation Results:</strong> BER comparison with fixed NASA (133,171) code</p>
-                    <p><i class="fas fa-chart-line"></i> <strong>Resource Usage:</strong> LUT count, flip-flops, max clock frequency</p>
-                    <p><i class="fas fa-chart-line"></i> <strong>Synchronization:</strong> Verified chaos generator synchronization for correct decoding</p>
-                    <p><i class="fas fa-file-alt"></i> <strong>Technical Paper:</strong> Complete proposal with block diagrams and architecture</p>
-                </div>
-                
-                <div class="project-links" style="margin-top: 1.5rem;">
-                    <a href="#" class="project-link">
-                        <i class="fab fa-github"></i> Repository (Coming Soon)
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-file-pdf"></i> Project Proposal
-                    </a>
-                </div>
-            </div>
-            
-            <hr>
-            
-            <!-- Project 3: Digital Voltmeter -->
-            <div class="project-detail" id="voltmeter-project">
-                <div class="project-header">
-                    <h2 style="font-size: 2rem;">📟 Digital Voltmeter (ADC0808 + 8051)</h2>
-                    <p style="color: #888; margin-top: 0.5rem;">Embedded Systems Project | Microcontroller Programming</p>
-                </div>
-                
-                <h3>📋 Project Overview</h3>
-                <p>3-channel digital voltmeter using 8051 microcontroller and ADC0808. Converts analog voltage (0-5V) from potentiometers to digital display on a 16×2 LCD. Achieved 19.5mV resolution with less than 2% error across all channels.</p>
-                
-                <h3>🔧 Technical Details</h3>
-                <ul style="color: #ccc; margin-left: 1.5rem;">
-                    <li><strong>Microcontroller:</strong> AT89S52 (8051 architecture)</li>
-                    <li><strong>ADC:</strong> ADC0808 with 8-channel multiplexer</li>
-                    <li><strong>Display:</strong> 16×2 HD44780 LCD (4-bit mode)</li>
-                    <li><strong>Programming:</strong> Embedded C in Keil μVision</li>
-                    <li><strong>Simulation:</strong> Proteus Design Suite</li>
-                </ul>
-                
-                <h3>📊 Results & Proof</h3>
-                <div class="proof-section">
-                    <p><i class="fas fa-chart-line"></i> <strong>Accuracy:</strong> Average error < 2% across test voltages (0.5V - 4.5V)</p>
-                    <p><i class="fas fa-chart-line"></i> <strong>Resolution:</strong> 19.5mV per step (5V/255)</p>
-                    <p><i class="fas fa-check-circle"></i> <strong>Working Simulation:</strong> Successfully simulated in Proteus with real-time updates</p>
-                    <p><i class="fas fa-file-alt"></i> <strong>Documentation:</strong> Complete project report with schematic, code, and results</p>
-                </div>
-                
-                <div class="project-links" style="margin-top: 1.5rem;">
-                    <a href="#" class="project-link">
-                        <i class="fab fa-github"></i> Repository (Coming Soon)
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-file-pdf"></i> Full Report
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-microchip"></i> Schematic
-                    </a>
-                </div>
-            </div>
-            <!-- Project 4: FPGA Crypto Accelerator (Under Construction) -->
-<div class="project-detail" id="crypto-project">
-    <div class="project-header">
-        <h2 style="font-size: 2rem;">🔐 FPGA‑Based Crypto Accelerator (AES‑128 + SHA‑256)</h2>
-        <p style="color: #888; margin-top: 0.5rem;">
-            <span style="background: #222; padding: 0.2rem 0.8rem; border-radius: 20px;">🚧 WORK IN PROGRESS</span>
-            <br>Hardware Security Module | Tamper‑Response | ESP32 Bridge
-        </p>
-    </div>
-
-    <h3>📋 Project Overview</h3>
-    <p>Designing a dedicated hardware accelerator for AES‑128 encryption/decryption and SHA‑256 hashing, implemented in Verilog on an FPGA. The system includes a protected key storage register that locks the root key after configuration – it cannot be read out, only used internally. A physical tamper button (or sensor) instantly zeros the key, demonstrating active tamper response. Communication is handled by an ESP32 acting as a USB‑to‑SPI bridge, allowing a Python script on a PC to send encryption or HMAC commands. The final system proves hardware key separation: even if the host is compromised, the secret key stays safe inside the FPGA.</p>
-
-    <h3>🔧 Planned Features</h3>
-    <ul style="color: #ccc; margin-left: 1.5rem;">
-        <li><strong>AES‑128:</strong> ECB and CBC modes, fully pipelined for high throughput</li>
-        <li><strong>SHA‑256:</strong> HMAC support for authentication</li>
-        <li><strong>Key Storage:</strong> Internal register with write‑only access (locked after programming)</li>
-        <li><strong>Tamper Detection:</strong> Physical button triggers key zeroization and erases sensitive state</li>
-        <li><strong>Host Interface:</strong> ESP32 acts as SPI bridge – commands from Python over USB</li>
-        <li><strong>FPGA Target:</strong> Xilinx Artix‑7 or similar (Vivado development)</li>
+<header class="site-nav">
+  <div class="container">
+    <div class="logo"><a href="index.html">JOSEPH BABU<span class="dot">.</span></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="credentials.html">Credentials</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
     </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+  </div>
+</header>
 
-    <h3>📊 Current Status</h3>
-    <div class="proof-section">
-        <p><i class="fas fa-spinner fa-spin"></i> <strong>In Progress:</strong> AES‑128 core designed and simulated; SHA‑256 module under implementation</p>
-        <p><i class="fas fa-code-branch"></i> <strong>Next Steps:</strong> Integrate key storage with write‑once logic, implement tamper circuit on FPGA board, write ESP32 firmware and Python host script</p>
-        <p><i class="fas fa-file-alt"></i> <strong>Documentation:</strong> Design notes and simulation results will be added as development continues</p>
+<section class="hero" style="padding-bottom: 48px;">
+  <div class="container">
+    <div class="eyebrow">Project Log</div>
+    <h1 style="font-size: clamp(2rem, 4vw, 2.8rem);">Engineering Projects</h1>
+    <p class="role-line">Documented builds, spanning embedded firmware, FPGA RTL design, and applied cryptographic hardware. Each entry lists the technical approach, current status, and verifiable results.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Project 01 -->
+    <div class="project">
+      <div class="project-header">
+        <div class="titles">
+          <h3>EV Go-Kart CAN Telemetry System</h3>
+          <div class="meta">Formula Kart Racing Championship, Season 06 — March 2025 to March 2026</div>
+        </div>
+        <span class="status complete">Complete</span>
+      </div>
+      <div class="project-body">
+        <p class="project-summary">A complete CAN bus telemetry system for a competitive electric go-kart. Reads motor data — RPM, temperature, and voltage — from the VESC motor controller over CAN, and displays real-time metrics on an onboard LCD during practice and race runs.</p>
+
+        <table class="spec-table">
+          <tr><td>Microcontroller</td><td>ESP32 with MCP2515 CAN controller</td></tr>
+          <tr><td>CAN protocol</td><td>250 kbps, extended frames (29-bit IDs)</td></tr>
+          <tr><td>Display</td><td>16&times;2 I2C LCD</td></tr>
+          <tr><td>Motor controller</td><td>VESC, custom DBC file</td></tr>
+          <tr><td>Speed calculation</td><td>Derived from motor RPM and wheel circumference (27.94 cm diameter)</td></tr>
+        </table>
+
+        <div class="results-list">
+          <div class="result-row"><span class="mark">&rarr;</span> Tested and run on the actual go-kart during live practice sessions</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Delivered as the telemetry subsystem for the team's Season 06 entry</div>
+          <div class="result-row"><span class="mark">&rarr;</span> 9 commits, multiple working firmware revisions, complete CAN ID mapping and DBC documentation</div>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/yechezkiel/CAN-GOKart" target="_blank" rel="noopener">Repository &rarr;</a>
+          <a href="https://github.com/yechezkiel/CAN-GOKart/blob/main/CAN_read.ino" target="_blank" rel="noopener">Source code &rarr;</a>
+        </div>
+      </div>
     </div>
 
-    <div class="project-links" style="margin-top: 1.5rem;">
-        <a href="#" class="project-link">
-            <i class="fab fa-github"></i> Repository (Coming Soon)
-        </a>
-        <a href="#" class="project-link">
-            <i class="fas fa-file-pdf"></i> Design Spec (Draft)
-        </a>
+    <!-- Project 02 -->
+    <div class="project">
+      <div class="project-header">
+        <div class="titles">
+          <h3>Chaos-Driven Time-Varying Convolutional Codec</h3>
+          <div class="meta">Research project — FPGA implementation, Verilog HDL</div>
+        </div>
+        <span class="status in-progress">In Progress</span>
+      </div>
+      <div class="project-body">
+        <p class="project-summary">A convolutional encoder (K=7) that varies its generator polynomials dynamically using a synchronized chaotic sequence, rather than the fixed generators used in conventional designs. The aim is to introduce lightweight physical-layer security while preserving standard error-correction performance.</p>
+
+        <table class="spec-table">
+          <tr><td>Encoding</td><td>Rate 1/2 convolutional encoder, constraint length K=7</td></tr>
+          <tr><td>Polynomial selection</td><td>Dynamic, driven by a logistic-map chaos generator</td></tr>
+          <tr><td>Decoding</td><td>64-state Viterbi decoder, synchronized to the chaos generator</td></tr>
+          <tr><td>Implementation</td><td>Synthesizable Verilog HDL, target FPGA</td></tr>
+          <tr><td>Toolchain</td><td>Vivado, ModelSim, Xilinx FPGA</td></tr>
+        </table>
+
+        <div class="results-list">
+          <div class="result-row"><span class="mark">&rarr;</span> BER simulation underway against the fixed NASA (133,171) reference code</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Chaos generator synchronization verified for correct decoding</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Resource usage (LUTs, flip-flops, max clock frequency) being characterized</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Full technical proposal completed, with block diagrams and architecture</div>
+        </div>
+
+        <div class="project-links">
+          <span class="disabled">Repository — coming soon</span>
+          <span class="disabled">Project proposal — coming soon</span>
+        </div>
+      </div>
     </div>
-</div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="index.html" class="btn">← BACK TO HOME</a>
-                <a href="https://github.com/yechezkiel?tab=repositories" target="_blank" class="btn" style="margin-left: 1rem;">
-                    VIEW ALL ON GITHUB <i class="fab fa-github"></i>
-                </a>
-            </div>
+
+    <!-- Project 03 -->
+    <div class="project">
+      <div class="project-header">
+        <div class="titles">
+          <h3>3-Channel Digital Voltmeter (ADC0808 + 8051)</h3>
+          <div class="meta">Embedded systems project — microcontroller programming</div>
         </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>© 2024 JOSEPH BABU | ELECTRONICS & COMMUNICATION ENGINEER | GEC THRISSUR</p>
+        <span class="status complete">Complete</span>
+      </div>
+      <div class="project-body">
+        <p class="project-summary">A 3-channel digital voltmeter built on the 8051 architecture. Converts analog voltage (0&ndash;5V) from potentiometers into a digital readout on a 16&times;2 LCD, with measured resolution under 20 mV and error below 2% across the test range.</p>
+
+        <table class="spec-table">
+          <tr><td>Microcontroller</td><td>AT89S52 (8051 architecture)</td></tr>
+          <tr><td>ADC</td><td>ADC0808, 8-channel multiplexer</td></tr>
+          <tr><td>Display</td><td>16&times;2 HD44780 LCD, 4-bit mode</td></tr>
+          <tr><td>Firmware</td><td>Embedded C, Keil &micro;Vision</td></tr>
+          <tr><td>Simulation</td><td>Proteus Design Suite</td></tr>
+        </table>
+
+        <div class="results-list">
+          <div class="result-row"><span class="mark">&rarr;</span> Average error under 2% across test voltages from 0.5V to 4.5V</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Resolution of 19.5 mV per step (5V / 255)</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Verified in Proteus with real-time, continuously updating display</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Full project report with schematic, source code, and results documented</div>
         </div>
-    </footer>
+
+        <div class="project-links">
+          <span class="disabled">Repository — coming soon</span>
+          <span class="disabled">Full report — coming soon</span>
+          <span class="disabled">Schematic — coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 04 -->
+    <div class="project">
+      <div class="project-header">
+        <div class="titles">
+          <h3>FPGA-Based Crypto Accelerator (AES-128 + SHA-256)</h3>
+          <div class="meta">Hardware security module — tamper response, ESP32 host bridge</div>
+        </div>
+        <span class="status in-progress">In Progress</span>
+      </div>
+      <div class="project-body">
+        <p class="project-summary">A dedicated FPGA hardware accelerator for AES-128 encryption/decryption and SHA-256 hashing, with a protected internal key register that cannot be read out once configured — only used internally. A physical tamper switch zeroizes the key instantly, demonstrating active tamper response. An ESP32 acts as a USB-to-SPI bridge so a host PC can issue encryption and HMAC commands over Python, while the secret key never leaves the FPGA, even if the host is compromised.</p>
+
+        <table class="spec-table">
+          <tr><td>AES-128</td><td>ECB and CBC modes, fully pipelined for throughput</td></tr>
+          <tr><td>SHA-256</td><td>HMAC support for authentication</td></tr>
+          <tr><td>Key storage</td><td>Internal register, write-only, locked after programming</td></tr>
+          <tr><td>Tamper response</td><td>Physical switch triggers key zeroization and clears sensitive state</td></tr>
+          <tr><td>Host interface</td><td>ESP32 as SPI bridge, commands issued from a Python host script over USB</td></tr>
+          <tr><td>Target hardware</td><td>Xilinx Artix-7 (or equivalent), Vivado toolchain</td></tr>
+        </table>
+
+        <div class="results-list">
+          <div class="result-row"><span class="mark">&rarr;</span> AES-128 core designed and simulated; SHA-256 module under implementation</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Next: write-once key storage integration, tamper circuit on physical FPGA board, ESP32 and Python host firmware</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Design notes and simulation results being documented as development continues</div>
+        </div>
+
+        <div class="project-links">
+          <span class="disabled">Repository — coming soon</span>
+          <span class="disabled">Design spec (draft) — coming soon</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+    <a href="index.html" class="back-link" style="margin-bottom:0;">&larr; Back to home</a>
+    <a href="https://github.com/josephbabu1?tab=repositories" target="_blank" rel="noopener" class="btn">View all repositories on GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Joseph Babu — Electronics &amp; Communication Engineer, GEC Thrissur</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
