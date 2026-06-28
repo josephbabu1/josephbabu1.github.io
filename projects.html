@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects | Joseph Babu</title>
-<meta name="description" content="Engineering projects by Joseph Babu — CAN bus telemetry, FPGA cryptographic hardware, and embedded systems work.">
+<meta name="description" content="Engineering projects by Joseph Babu — CAN bus telemetry, chaos-based physical-layer security, and embedded systems work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
   <div class="container">
     <div class="eyebrow">Project Log</div>
     <h1 style="font-size: clamp(2rem, 4vw, 2.8rem);">Engineering Projects</h1>
-    <p class="role-line">Documented builds, spanning embedded firmware, FPGA RTL design, and applied cryptographic hardware. Each entry lists the technical approach, current status, and verifiable results.</p>
+    <p class="role-line">Documented builds, spanning embedded firmware, FPGA RTL design, and competition robotics. Each entry lists the technical approach, current status, and verifiable results.</p>
   </div>
 </section>
 
@@ -64,8 +64,7 @@
         </div>
 
         <div class="project-links">
-          <a href="https://github.com/yechezkiel/CAN-GOKart" target="_blank" rel="noopener">Repository &rarr;</a>
-          <a href="https://github.com/yechezkiel/CAN-GOKart/blob/main/CAN_read.ino" target="_blank" rel="noopener">Source code &rarr;</a>
+          <a href="https://github.com/josephbabu1?tab=repositories" target="_blank" rel="noopener">View repositories &rarr;</a>
         </div>
       </div>
     </div>
@@ -146,32 +145,25 @@
     <div class="project">
       <div class="project-header">
         <div class="titles">
-          <h3>FPGA-Based Crypto Accelerator (AES-128 + SHA-256)</h3>
-          <div class="meta">Hardware security module — tamper response, ESP32 host bridge</div>
+          <h3>Line-Follower Robot</h3>
+          <div class="meta">Robotics competition build — IR-based line tracking, WiFi control option</div>
         </div>
-        <span class="status in-progress">In Progress</span>
+        <span class="status complete">Complete</span>
       </div>
       <div class="project-body">
-        <p class="project-summary">A dedicated FPGA hardware accelerator for AES-128 encryption/decryption and SHA-256 hashing, with a protected internal key register that cannot be read out once configured — only used internally. A physical tamper switch zeroizes the key instantly, demonstrating active tamper response. An ESP32 acts as a USB-to-SPI bridge so a host PC can issue encryption and HMAC commands over Python, while the secret key never leaves the FPGA, even if the host is compromised.</p>
+        <p class="project-summary">A competition line-following robot built around an ESP32, using an IR sensor array for real-time line detection and on-board control logic. An OLED display shows live sensor and status feedback, and an added WiFi control mode lets the robot be driven remotely in addition to its autonomous line-following behavior.</p>
 
         <table class="spec-table">
-          <tr><td>AES-128</td><td>ECB and CBC modes, fully pipelined for throughput</td></tr>
-          <tr><td>SHA-256</td><td>HMAC support for authentication</td></tr>
-          <tr><td>Key storage</td><td>Internal register, write-only, locked after programming</td></tr>
-          <tr><td>Tamper response</td><td>Physical switch triggers key zeroization and clears sensitive state</td></tr>
-          <tr><td>Host interface</td><td>ESP32 as SPI bridge, commands issued from a Python host script over USB</td></tr>
-          <tr><td>Target hardware</td><td>Xilinx Artix-7 (or equivalent), Vivado toolchain</td></tr>
+          <tr><td>Microcontroller</td><td>ESP32</td></tr>
+          <tr><td>Line sensing</td><td>IR sensor array</td></tr>
+          <tr><td>Display</td><td>OLED — live sensor and status feedback</td></tr>
+          <tr><td>Control modes</td><td>Autonomous line-following, plus WiFi remote control</td></tr>
         </table>
 
         <div class="results-list">
-          <div class="result-row"><span class="mark">&rarr;</span> AES-128 core designed and simulated; SHA-256 module under implementation</div>
-          <div class="result-row"><span class="mark">&rarr;</span> Next: write-once key storage integration, tamper circuit on physical FPGA board, ESP32 and Python host firmware</div>
-          <div class="result-row"><span class="mark">&rarr;</span> Design notes and simulation results being documented as development continues</div>
-        </div>
-
-        <div class="project-links">
-          <span class="disabled">Repository — coming soon</span>
-          <span class="disabled">Design spec (draft) — coming soon</span>
+          <div class="result-row"><span class="mark">&rarr;</span> Built and run in robotics competitions</div>
+          <div class="result-row"><span class="mark">&rarr;</span> Reliable real-time line tracking using the IR sensor array</div>
+          <div class="result-row"><span class="mark">&rarr;</span> WiFi control mode adds remote operation alongside autonomous tracking</div>
         </div>
       </div>
     </div>
