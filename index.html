@@ -18,6 +18,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="credentials.html">Credentials</a></li>
       <li><a href="index.html#contact">Contact</a></li>
@@ -29,7 +30,7 @@
 <section class="hero" id="home">
   <div class="container">
     <div class="eyebrow">Electronics &amp; Communication Engineering — GEC Thrissur</div>
-    <h1>Embedded systems and secure communication protocols, built and verified at the hardware level.</h1>
+    <h1>Embedded systems, built and verified at the hardware level.</h1>
     <p class="role-line">I design and implement FPGA-based signal processing, CAN bus telemetry, and hardware security systems — from Verilog RTL through tested, working prototypes.</p>
 
     <div class="spec-line">
@@ -58,13 +59,13 @@
     <div class="about-grid">
       <div class="about-text">
         <p>I'm a second-year Electronics and Communication Engineering student at Government Engineering College, Thrissur. My work centers on embedded systems, digital signal processing, and FPGA-based hardware design — with a particular interest in building physical-layer security directly into communication hardware rather than treating it as a software afterthought.</p>
-        <p>Current projects span CAN bus telemetry for an active electric go-kart racing team, a chaos-driven convolutional codec for lightweight physical-layer security, and an FPGA-based AES-128 / SHA-256 hardware accelerator with tamper response.</p>
+        <p>Current projects span CAN bus telemetry for an active electric go-kart racing team and a chaos-driven convolutional codec for lightweight physical-layer security.</p>
 
         <div class="callout">
           <div>
             <div class="callout-label">Current Research Focus</div>
-            <h3>AES-128 implementation in hardware</h3>
-            <p>Building a dedicated FPGA crypto accelerator with internal key storage that cannot be read out, and a physical tamper switch that zeroizes the key — so the secret stays inside the silicon even if the host system is compromised.</p>
+            <h3>Adaptive FEC for chiplet die-to-die interconnects</h3>
+            <p>Designing a rate-adaptive forward error correction engine for UCIe-style D2D links in chiplet-based NoCs. The codec monitors real-time link SNR and dynamically switches between BCH code rates &mdash; trading bandwidth for error-correction strength only when channel conditions demand it, instead of paying a fixed FEC overhead at all times.</p>
           </div>
           <span class="status-tag">In Progress</span>
         </div>
@@ -127,11 +128,38 @@
   </div>
 </section>
 
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-head">
+      <h2>Experience</h2>
+      <span class="index">02</span>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="titles">
+          <h3>Training &amp; Internship Program — Pravega, IISc Bangalore</h3>
+          <div class="meta">Ethical Edufabrica Pvt. Ltd., in association with Pravega IISc Bangalore &middot; 20&ndash;24 June 2026</div>
+        </div>
+        <span class="status complete">Complete</span>
+      </div>
+      <div class="project-body">
+        <p class="project-summary">Completed an offline training and internship program at IISc Bangalore, building and demonstrating an embedded electronics project end-to-end as part of the certified training track.</p>
+        <table class="spec-table">
+          <tr><td>Project</td><td>Automatic Street Light Controller using LDR and BJT</td></tr>
+          <tr><td>Format</td><td>Offline, on-site &mdash; IISc Bangalore</td></tr>
+          <tr><td>Outcome</td><td>Project completed to required standard; certified by Edufabrica and Pravega IISc Bangalore</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="contact">
   <div class="container">
     <div class="section-head">
       <h2>Contact</h2>
-      <span class="index">02</span>
+      <span class="index">03</span>
     </div>
 
     <div class="contact-grid">
@@ -170,6 +198,7 @@
     <p>&copy; 2026 Joseph Babu — Electronics &amp; Communication Engineer</p>
     <div class="footer-links">
       <a href="index.html">Home</a>
+      <a href="index.html#experience">Experience</a>
       <a href="projects.html">Projects</a>
       <a href="credentials.html">Credentials</a>
     </div>
